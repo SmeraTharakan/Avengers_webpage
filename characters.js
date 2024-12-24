@@ -1,15 +1,3 @@
-
-const images = ["assets/av1.jpg", "assets/av2.jpg","assets/av3.jpg","assets/av4.jpg"];
-let currentIndex = 0;
-
-function changeImage() {
-    const imageElement = document.getElementById("avengersImage");
-    currentIndex = (currentIndex + 1) % images.length; 
-    imageElement.src = images[currentIndex];
-}
-
-setInterval(changeImage, 2000);
-
 const nav = document.querySelector('.nav-container');
 
 let isScrolled = false;
