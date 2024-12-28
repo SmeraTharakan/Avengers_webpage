@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    margin-top: 60px;
+    margin-top: 120px; 
     padding: 0;
     background-image: url('assets/background.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     color: white;
 }
 
@@ -18,20 +18,21 @@ header {
     width: 100%;
     position: fixed;
     z-index: 1000;
+    box-sizing: border-box; 
 }
 
 header img {
     display: block;
     margin: 0 auto;
+    width: 200px;
+    height: 40px;
 }
 
 .nav-container {
     position: fixed;
-    top: 60px; 
+    top: 60px;
     width: 100%;
     background-color: #444;
-    transform: translateY(0); 
-    transition: transform 0.3s ease-in-out;
     z-index: 999;
 }
 
@@ -46,6 +47,7 @@ nav a {
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
+    font-size: medium;
 }
 
 nav a:hover {
@@ -54,16 +56,22 @@ nav a:hover {
 
 .character {
     position: relative;
-    text-align: center;
-    width: 100%; 
+    max-width: 100%; 
+    overflow: hidden;
     margin: 20px 0; 
 }
 
 .character img {
-    width: 100vw;
+    width: 100%; 
     height: 550px;
+    display: block;
     object-fit: cover;
     transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.character:hover img {
+    transform: scale(1.05); 
+    filter: brightness(0.8);
 }
 
 .overlay-left {
@@ -77,6 +85,7 @@ nav a:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     z-index: 10;
 }
+
 .overlay-right {
     position: absolute;
     top: 50%; 
@@ -88,17 +97,11 @@ nav a:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     z-index: 10;
 }
-.character:hover img {
-    transform: scale(1.05); 
-    filter: brightness(0.8); 
-}
-
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    width: 100%;
     bottom: 0;
 }
