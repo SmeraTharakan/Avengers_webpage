@@ -1,35 +1,36 @@
 
-const images = ["assets/av1.jpg", "assets/av2.jpg","assets/av3.jpg","assets/av4.jpg"];
+
+const images = ["assets/av1.jpg", "assets/av2.jpg", "assets/av3.jpg", "assets/av4.jpg", "assets/av5.jpg"];
 let currentIndex = 0;
 
-function changeImage() {
+const dotsContainer = document.querySelector(".dots-container");
+images.forEach((_, index) => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active"); 
+    dot.addEventListener("click", () => {
+        currentIndex = index;
+        updateImageAndDots();
+    });
+    dotsContainer.appendChild(dot);
+});
+
+function updateImageAndDots() {
     const imageElement = document.getElementById("avengersImage");
-    currentIndex = (currentIndex + 1) % images.length; 
+    const dots = document.querySelectorAll(".dot");
+
     imageElement.src = images[currentIndex];
+
+    dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+            dot.classList.add("active");
+        } else {
+            dot.classList.remove("active");
+        }
+    });
 }
 
-setInterval(changeImage, 2000);
-
-const nav = document.querySelector('.nav-container');
-
-let isScrolled = false;
-
-window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-
-    if (scrollTop > 0) {
-        isScrolled = true;
-        nav.style.transform = 'translateY(-100%)'; 
-    } else {
-        isScrolled = false;
-        nav.style.transform = 'translateY(0)'; 
-    }
-});
-
-document.addEventListener('mousemove', (e) => {
-    if (isScrolled && e.clientY < 100) {
-        nav.style.transform = 'translateY(0)'; 
-    } else if (isScrolled) {
-        nav.style.transform = 'translateY(-100%)';
-    }
-});
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImageAndDots();
+}, 2000);
