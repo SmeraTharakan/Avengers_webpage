@@ -67,11 +67,12 @@ nav a:hover {
     left: 20%; 
     transform: translate(-50%, -50%); 
     color: white;
-    font-size: 3em;
+    font-size: 3em; 
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9);
     z-index: 10; 
 }
+
 
 .dots-container {
     position: absolute;
