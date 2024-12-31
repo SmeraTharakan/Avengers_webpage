@@ -124,8 +124,12 @@ nav a:hover {
 }
 
 .bio h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    letter-spacing: 2px; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    margin-bottom: 20px; 
 }
 
 .bio p {
@@ -139,13 +143,16 @@ nav a:hover {
     text-align: center;
     padding: 50px;
     background-color: #f4f4f4; 
-    color: #333;
     border-radius: 10px;
 }
 
 .movies-section h2 {
-    font-size: 2.3em;
-    color: #222;
+    font-size: 2.5em; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    letter-spacing: 2px; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    margin-bottom: 20px; 
 }
 
 .movies {
@@ -171,6 +178,11 @@ nav a:hover {
 .movie:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie:hover h3 {
+    color: #FF4500; 
+    transition: color 0.3s ease; 
 }
 
 .movie img {

@@ -98,6 +98,13 @@ nav a:hover {
     z-index: 10;
 }
 
+.character:hover .overlay-left, 
+.character:hover .overlay-right {
+    transform: translate(0, -50%) scale(1.05); 
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); 
+    color: goldenrod; 
+}
+
 footer {
     background-color: #333;
     color: white;
