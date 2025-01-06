@@ -200,3 +200,108 @@ footer {
     padding: 10px;
     bottom: 0;
 }
+
+
+@media (max-width: 393px) {
+    body {
+        margin-top: 91px; 
+    }
+
+    header {
+        width: 393px;
+    }
+
+    header img {
+        width: 160px; 
+        height: auto;
+    }
+
+    nav {
+        flex-wrap: wrap; 
+    }
+
+    .nav-container {
+        width: 393px;
+        top: 56px;
+    }
+
+    nav a {
+        font-size: small; 
+        padding: 10px; 
+    }
+
+    .hero-image {
+        height: 30vh; 
+        padding: 10px;
+    }
+
+    .hero-text {
+        max-width: 95%;
+        padding: 10px;
+        font-size: small;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+    
+    .hero-text h2 {
+        font-size: 1em;
+    }
+    
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .movies-section h2 {
+        margin-bottom: 60px;
+    }
+
+    .movies {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 40px; 
+        height: auto; 
+    }
+
+    .movie {
+        max-width: 90%; 
+        height: auto; 
+    }
+
+    .movie img {
+        height: auto; 
+    }
+
+    .profile-section {
+        padding: 35px;
+    }
+
+    .profile-container {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+        height: auto; 
+    }
+
+    .profile-pic img {
+        max-width: 180px; 
+        max-height: 200px;
+    }
+
+    footer {
+        font-size: small; 
+        padding: 5px; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
